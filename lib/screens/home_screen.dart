@@ -437,7 +437,7 @@ class _HomeScreenState extends State<HomeScreen> {
           _controller.text = "";
           _showSnackBar("Video downloaded succesfully.", 2);
         });
-      } on DioError catch (e) {
+      } on DioException catch (e) {
         setState(() {
           _videoType = VideoType.none;
           _isDownloading = false;
